@@ -1,5 +1,12 @@
+import { Fragment } from "react";
+import NewMeetupForm from "../components/meetup/NewMeetupForm/newMeetupForm";
+
 function NewMeetup() {
-  return <div>NewMeetup</div>;
+  return (
+    <Fragment>
+      <NewMeetupForm />
+    </Fragment>
+  );
 }
 
 export default NewMeetup;

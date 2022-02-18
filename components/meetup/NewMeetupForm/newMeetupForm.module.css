@@ -1,0 +1,37 @@
+.main {
+  width: 50%;
+  margin: 3rem auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 3rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.form input {
+  width: 100%;
+  outline: none;
+  border: 1px solid black;
+  padding: 7px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+.form input:active,
+.form input:focus {
+  border: 1px solid lightblue;
+}
+.form textarea {
+  width: 100%;
+  outline: none;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+.form textarea:active,
+.form textarea:focus {
+  border: 1px solid lightblue;
+}
+.block {
+  display: block;
+}

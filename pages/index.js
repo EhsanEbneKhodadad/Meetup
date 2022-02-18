@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import MeetupItems from "../components/meetup/meetupItems/meetupItems";
 
 function HomePage() {
@@ -23,9 +24,9 @@ function HomePage() {
   ];
 
   return (
-    <div>
+    <Fragment>
       <MeetupItems data={DUMMY_DATA} />
-    </div>
+    </Fragment>
   );
 }
 
