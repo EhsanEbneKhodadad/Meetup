@@ -8,10 +8,11 @@ function MeetupItem(props) {
       <div className={styles.image}>
         <Image src={`/assets/${image}`} alt={title} width={800} height={400} />
       </div>
-      <div className={styles.info}>
+      <div>
         <h3>{title}</h3>
         <address>{address}</address>
       </div>
+      <button>Show Details</button>
     </section>
   );
 }

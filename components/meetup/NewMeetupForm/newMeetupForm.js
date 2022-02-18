@@ -3,6 +3,7 @@ import styles from "./newMeetupForm.module.css";
 function NewMeetupForm() {
   return (
     <section className={styles.main}>
+      <h1>Add New Meetup</h1>
       <form className={styles.form}>
         <div>
           <label htmlFor="title" className={styles.block}>
@@ -27,6 +28,9 @@ function NewMeetupForm() {
             Meetup Description
           </label>
           <textarea id="description" rows={5} />
+        </div>
+        <div className={styles.button}>
+          <button>Add New Meetup</button>
         </div>
       </form>
     </section>

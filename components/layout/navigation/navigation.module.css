@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  background: #8fa3bc;
+}
+.nav{
+    color: #001e53;
+}
+.nav ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.inline {
+    display: flex;
+}
+.inline a{
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+}

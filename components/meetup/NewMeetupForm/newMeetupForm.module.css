@@ -3,7 +3,11 @@
   margin: 3rem auto;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-radius: 5px;
-  padding: 3rem;
+  padding: 2rem;
+}
+.main h1{
+  text-align: center;
+  color: #001e53;
 }
 .form {
   display: flex;
@@ -20,7 +24,10 @@
 }
 .form input:active,
 .form input:focus {
-  border: 1px solid lightblue;
+  border: 1px solid #8fa3bc;
+}
+.form label{
+  color: #001e53;
 }
 .form textarea {
   width: 100%;
@@ -30,7 +37,19 @@
 }
 .form textarea:active,
 .form textarea:focus {
-  border: 1px solid lightblue;
+  border: 1px solid #8fa3bc;
+}
+.button{
+  align-self: flex-end;
+}
+.button button{
+  background: #8fa3bc;
+  color: #001e53;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
 }
 .block {
   display: block;
