@@ -1,8 +1,14 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "./meetupItem.module.css";
 
 function MeetupItem(props) {
-  const { image, title, address } = props;
+  const { image, title, address, id } = props;
+  const router = useRouter();
+  const showDetailPageHandler = () => {
+    router.push(`/${id}`);
+  };
+
   return (
     <section className={styles.main}>
       <div className={styles.image}>
@@ -12,7 +18,7 @@ function MeetupItem(props) {
         <h3>{title}</h3>
         <address>{address}</address>
       </div>
-      <button>Show Details</button>
+      <button onClick={showDetailPageHandler}>Show Details</button>
     </section>
   );
 }
