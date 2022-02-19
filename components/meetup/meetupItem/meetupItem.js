@@ -12,7 +12,7 @@ function MeetupItem(props) {
   return (
     <section className={styles.main}>
       <div className={styles.image}>
-        <Image src={`/assets/${image}`} alt={title} width={800} height={400} />
+        <Image src='https://images.pexels.com/photos/9034760/pexels-photo-9034760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt={title} width={800} height={400} />
       </div>
       <div>
         <h3>{title}</h3>

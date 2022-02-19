@@ -1,6 +1,29 @@
+import { useRef } from "react";
 import styles from "./newMeetupForm.module.css";
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
+  const titleRef = useRef();
+  const imageRef = useRef();
+  const addressRef = useRef();
+  const descriptionRef = useRef();
+
+  const addMeetupHandler = (event) => {
+    event.preventDefault();
+    const title = titleRef.current.value;
+    const image = imageRef.current.value;
+    const address = addressRef.current.value;
+    const description = descriptionRef.current.value;
+    const data = {
+      title: title,
+      image: image,
+      address: address,
+      description: description,
+    };
+
+    console.log(image);
+    props.addMeetupHandler(data);
+  };
+
   return (
     <section className={styles.main}>
       <h1>Add New Meetup</h1>
@@ -9,28 +32,28 @@ function NewMeetupForm() {
           <label htmlFor="title" className={styles.block}>
             Meetup Title
           </label>
-          <input id="title" type="text" />
+          <input id="title" type="text" ref={titleRef} />
         </div>
         <div>
           <label htmlFor="image" className={styles.block}>
             Meetup Image
           </label>
-          <input id="image" type="text" />
+          <input id="image" type="text" ref={imageRef} />
         </div>
         <div>
           <label htmlFor="address" className={styles.block}>
             Meetup Address
           </label>
-          <input id="address" type="text" />
+          <input id="address" type="text" ref={addressRef} />
         </div>
         <div>
           <label htmlFor="description" className={styles.block}>
             Meetup Description
           </label>
-          <textarea id="description" rows={5} />
+          <textarea id="description" rows={5} ref={descriptionRef} />
         </div>
         <div className={styles.button}>
-          <button>Add New Meetup</button>
+          <button onClick={addMeetupHandler}>Add New Meetup</button>
         </div>
       </form>
     </section>
