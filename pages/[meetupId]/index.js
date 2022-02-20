@@ -1,9 +1,15 @@
+import Head from "next/head";
 import MeetupDetail from "../../components/meetup/meetupDetail/meetupDetail";
 import { FetchData } from "../../lib/fetch-data";
 
 function MeetupDetailPage(props) {
   return (
     <div>
+      <Head>
+        <title>{props.data.id}</title>
+        <meta name="author" content="Ehsan Ebnekhodadad"></meta>
+        <meta name="description" content={props.data.description}></meta>
+      </Head>
       <MeetupDetail data={props.data} />
     </div>
   );
