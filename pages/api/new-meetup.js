@@ -1,7 +1,6 @@
 function NewMeetup(req, res) {
   if (req.method === "POST") {
     const data = req.body;
-    console.log(data)
     try {
       fetch("https://meetups-58b30-default-rtdb.firebaseio.com/meetups.json", {
         method: "POST",
