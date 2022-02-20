@@ -1,17 +1,21 @@
-.main{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 80%;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    margin: 2rem auto;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  margin: 1rem auto;
+  padding: 2rem;
 }
-.info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5rem;
+.info {
+  text-align: center;
 }
-.info h4{
-    text-align: justify;
+.info h4 {
+  text-align: justify;
+}
+@media (max-width:767px) {
+    .main{
+        width: 90%;
+    }
 }

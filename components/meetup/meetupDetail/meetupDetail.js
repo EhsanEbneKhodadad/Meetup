@@ -6,7 +6,7 @@ function MeetupDetail(props) {
   return (
     <section className={styles.main}>
       <div>
-        <Image src={image} alt={title} width={600} height={600} />
+        <Image src={image} alt={title} width={600} height={600}/>
       </div>
       <div className={styles.info}>
         <h1>{title}</h1>

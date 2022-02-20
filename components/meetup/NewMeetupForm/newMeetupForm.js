@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { GetAmount } from "../../../lib/fetch-data";
 import styles from "./newMeetupForm.module.css";
 
 function NewMeetupForm(props) {
@@ -7,13 +8,17 @@ function NewMeetupForm(props) {
   const addressRef = useRef();
   const descriptionRef = useRef();
 
-  const addMeetupHandler = (event) => {
+  async function addMeetupHandler(event) {
     event.preventDefault();
     const title = titleRef.current.value;
     const image = imageRef.current.value;
     const address = addressRef.current.value;
     const description = descriptionRef.current.value;
+
+    const number = await GetAmount();
+
     const data = {
+      id: `meetup-${number + 1}`,
       title: title,
       image: image,
       address: address,
@@ -22,7 +27,7 @@ function NewMeetupForm(props) {
 
     console.log(image);
     props.addMeetupHandler(data);
-  };
+  }
 
   return (
     <section className={styles.main}>

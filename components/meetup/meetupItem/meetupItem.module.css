@@ -1,34 +1,45 @@
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-    margin: 3rem auto;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    transition: 0.5s;
-    border-radius: 5px;
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 3rem auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+  border-radius: 5px;
 }
-.main:hover{
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+.main:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
-.image{
-    width: 100%;
+.image {
+  width: 100%;
 }
-.main address, .main h3{
-    color: #001e53;
+.main address,
+.main h3 {
+  color: #001e53;
 }
-.main button{
-    background: inherit;
-    color: #001e53;
-    border: 1px solid #8fa3bc;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: 0.5s;
-    margin: 2rem;
-    cursor: pointer;
+.main button {
+  background: inherit;
+  color: #001e53;
+  border: 1px solid #8fa3bc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin: 2rem;
+  cursor: pointer;
 }
-.main button:hover{
-    background-color: #001e53;
-    color: #fff;
+.main button:hover {
+  background-color: #001e53;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .main {
+    width: 70%;
+  }
+}
+@media (max-width: 480px) {
+  .main {
+    width: 90%;
+  }
 }
